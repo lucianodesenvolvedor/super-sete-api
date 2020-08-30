@@ -1,0 +1,11 @@
+create sequence sequence_anuncio increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_avaliacao increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_endereco increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_estoque increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_gondola increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_compra increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_compra_produto increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_produto increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_promocao increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_promocao_produto increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+create sequence sequence_usuario increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
