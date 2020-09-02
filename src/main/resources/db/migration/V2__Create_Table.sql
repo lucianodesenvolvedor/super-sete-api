@@ -1,10 +1,11 @@
 create table if not exists usuario(
 	id int primary key default nextval ('sequence_usuario'::regclass),
 	nome varchar(45) not null,
+	telefone varchar(15) not null,
 	email varchar(75) not null,
 	senha varchar(40) not null,
 	perfil varchar(25) not null,
-	data_nascimento timestamp not null,
+	data_cadastro timestamp not null,
 	data_ultimo_acesso timestamp not null,
 	status boolean
 );
@@ -42,7 +43,7 @@ create table if not exists produto(
 	gondola_id int not null references gondola(id),
 	descricao varchar(250) not null,
 	imagem varchar(250) not null,
-	preco_produto decimal(18,2) not null,
+	preco_de_custo decimal(18,2) not null,
 	preco_de_venda decimal(18,2) not null,
 	preco_promocional decimal(18,2) not null,
 	quantidade int not null,
