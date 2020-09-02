@@ -8,6 +8,7 @@ public class SuperSeteApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SuperSeteApiApplication.class, args);
+
 	}
 
 }
