@@ -16,7 +16,8 @@
 	<description>API Rest de um sistema de vendas online para um supermercado</description>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -76,6 +77,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -84,36 +90,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!--  
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.flywaydb</groupId>
-									<artifactId>flyway-core</artifactId>
-									<version>6.4.4</version>
-									<destFileName>flyway.jar</destFileName>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.postgresql</groupId>
-									<artifactId>postgresql</artifactId>
-									<destFileName>postgres.jar</destFileName>
-								</artifactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			-->
 		</plugins>
 	</build>
 

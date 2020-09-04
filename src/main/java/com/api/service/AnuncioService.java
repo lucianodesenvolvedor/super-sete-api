@@ -20,6 +20,26 @@ public class AnuncioService {
 	UsuarioRepository usuarioRepository;
 
 	public Anuncio create(Anuncio anuncio) {
+		/*
+		String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+		if(fileName.contains(".."))
+		{
+			System.out.println("not a a valid file");
+		}
+		
+		//File image = new File(fileName);
+		try {
+		byte[] arquivo = file.getBytes();
+		//FileInputStream fis = new FileInputStream(image);
+		//System.out.println("Image: " + image.getAbsolutePath());
+		
+		//anuncio.setImagem(arquivo);
+		
+			//anuncio.setImagem(Base64.getEncoder().encodeToString(file.getBytes()));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		*/
 		return repository.save(anuncio);
 	}
 

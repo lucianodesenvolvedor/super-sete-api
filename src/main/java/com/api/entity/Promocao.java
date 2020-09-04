@@ -27,8 +27,6 @@ public class Promocao implements Serializable {
 	private Long codigo;
 	@Column(name = "descricao", length = 250, nullable = false)
 	private String descricao;
-	@Column(name = "imagem", length = 250, nullable = false)
-	private String imagem;
 	@Column(name = "data_inicio")
 	private Date dataInicio;
 	@Column(name = "data_fim")
