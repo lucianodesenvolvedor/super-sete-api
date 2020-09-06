@@ -39,6 +39,14 @@ public class ProdutoService {
 		return produto;
 	}
 
+	public List<Produto> findByDestaque() {
+		return repository.findByDestaque(true);
+	}
+
+	public List<Produto> findByDescricao(String descricao) {
+		return repository.findByDescricaoContainingIgnoreCase(descricao);
+	}
+
 	public List<Produto> findByGondolaCodigo(Long codigo) {
 		return repository.findByGondolaCodigo(codigo);
 	}

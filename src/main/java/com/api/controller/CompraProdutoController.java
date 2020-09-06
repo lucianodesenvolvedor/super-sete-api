@@ -74,5 +74,15 @@ public class CompraProdutoController {
 	public ResponseEntity<?> delete(@PathVariable(value = "codigo") Long codigo) {
 		service.delete(codigo);
 		return ResponseEntity.ok().build();
-	}	
+	}
+	
+	@ApiOperation(value = "Deleta todos o produtos de uma compra_produto por código do compra_produto.")
+	@DeleteMapping("/compra_produto/{codigo}")
+	public boolean deleteListaCompraProduto(@PathVariable(value = "codigo") long codigo) {
+		List<CompraProduto> lista = service.findByCompraCodigo(codigo);
+		for (CompraProduto produto : lista) {
+			service.delete(produto.getCodigo());
+		}
+		return true;
+	}
 }

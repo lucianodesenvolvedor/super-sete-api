@@ -93,10 +93,22 @@ public class ProdutoController {
 		return service.findByGondolaCodigo(codigo);
 	}
 	
+	@ApiOperation(value = "Retorna uma lista com todos os produtos por cdescricao")
+	@GetMapping("/produtos_descricao/{descricao}")
+	public List<Produto> findByDescricao(@PathVariable(value = "descricao") String descricao) {
+		return service.findByDescricao(descricao);
+	}
+	
 	@ApiOperation(value = "Retorna uma lista com todos os produtos.")
 	@GetMapping("")
 	public List<Produto> findAll() {
 		return service.findAll();
+	}
+	
+	@ApiOperation(value = "Retorna uma lista com todos os produtos com destaque igual a true.")
+	@GetMapping("/destaque")
+	public List<Produto> findbyDestaqueEqualsTrue() {
+		return service.findByDestaque();
 	}
 	
 	@ApiOperation(value = "Deleta um produto por código.")
